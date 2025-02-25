@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug C++ with Stack",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${fileDirname}",
+        "environment": [],
+        "externalConsole": false,  // 使用外部控制台避免输入缓冲区问题
+        "MIMode": "gdb",
+        "miDebuggerPath": "gdb.exe",
+        "preLaunchTask": "Build C++ with 512MB Stack",
+        "setupCommands": [
+          {
+            "description": "启用整齐打印",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ]
+      }
+    ]
+  }

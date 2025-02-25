@@ -37,6 +37,8 @@ int main() {
         cout << b << " ";
     }
 
+    cout << "你好";
+
     // pair<int, double> p(1, 2.3);
     // cout << p.first << " " << p.second << endl;
 

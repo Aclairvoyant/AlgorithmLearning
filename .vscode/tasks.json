@@ -1,0 +1,31 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"type": "cppbuild",
+		"label": "Build C++ with 512MB Stack",
+		"command": "g++",
+		"args": [
+		  "-std=c++14",
+		  "-O2",
+		  "-Wall",
+		  "-Wextra",
+		  "-Wconversion",
+		  "-Wl,--stack=512000000",  // 设置栈大小
+		  "${file}",
+		  "-o",
+		  "${fileDirname}/${fileBasenameNoExtension}.exe",
+		  "-g"  // 生成调试信息
+		],
+		"options": {
+		  "cwd": "${fileDirname}"
+		},
+		"problemMatcher": ["$gcc"],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"detail": "使用 g++ 编译并设置 512MB 栈空间"
+	  }
+	]
+  }
